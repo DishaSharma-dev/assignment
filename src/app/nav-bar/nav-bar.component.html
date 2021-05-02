@@ -1,0 +1,114 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item active pr-3">
+                <a class="nav-link" [routerLink]="['/home', {outlets: {'home': ['aptitude']}}]" >Quantitative Aptitude <span class="sr-only">(current)</span></a>
+            </li>
+            <li>
+                <div class="dropdown nav-link active">
+                    <span class="dropbtn">Operating System</span>
+                    <div class="dropdown-content">
+                        <a [routerLink]="['/home', {outlets: {'home': ['defination']}}]">Defination</a>
+                        <a [routerLink]="['/home', {outlets: {'home': ['processes']}}]">Processes</a>
+                        <a [routerLink]="['/home', {outlets: {'home': ['types']}}]">Types</a>
+                        <a [routerLink]="['/home', {outlets: {'home': ['properties']}}]">Properties</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown nav-link active">
+                    <span class="dropbtn">DBMS</span>
+                    <div class="dropdown-content">
+                        <a [routerLink]="['/home', {outlets: {'home': ['data-architecture']}}]">Architecture</a>
+                        <a [routerLink]="['/home', {outlets: {'home': ['datamodels']}}]">Data Models</a>
+                        <a [routerLink]="['/home', {outlets: {'home': ['dataschemas']}}]">Data Schemas</a>
+                        <a [routerLink]="['/home', {outlets: {'home': ['dataindependence']}}]">Data Independence</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown nav-link active">
+                    <span class="dropbtn">Networking</span>
+                    <div class="dropdown-content">
+                        <a [routerLink]="['/home', {outlets: {'home': ['architecture']}}]">Architecture</a>
+                        <a [routerLink]="['/home', {outlets: {'home': ['topologies']}}]">Topologies</a>
+                        <a [routerLink]="['/home', {outlets: {'home': ['net_types']}}]">Types</a>
+                        <a [routerLink]="['/home', {outlets: {'home': ['models']}}]">Models</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown nav-link active">
+                    <span class="dropbtn">C</span>
+                    <div class="dropdown-content">
+                        <a [routerLink]="['/home', {outlets: {'home': ['datatypes']}}]">Data Types</a>
+                        <a [routerLink]="['/home', {outlets: {'home': ['variables']}}]">Variables</a>
+                        <a [routerLink]="['/home', {outlets: {'home': ['loops']}}]">Loops</a>
+                        <a [routerLink]="['/home', {outlets: {'home': ['functions']}}]">Functions</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown nav-link active">
+                    <span class="dropbtn">C++</span>
+                    <div class="dropdown-content">
+                        <a [routerLink]="['/home', {outlets: {'home': ['c_datatypes']}}]">Data Types</a>
+                        <a [routerLink]="['/home', {outlets: {'home': ['c_variables']}}]">Variables</a>
+                        <a [routerLink]="['/home', {outlets: {'home': ['c_loops']}}]">Loops</a>
+                        <a [routerLink]="['/home', {outlets: {'home': ['c_oops']}}]">OOps</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown nav-link active">
+                    <span class="dropbtn">Java</span>
+                    <div class="dropdown-content">
+                        <a [routerLink]="['/home', {outlets: {'home': ['object']}}]">Object</a>
+                        <a [routerLink]="['/home', {outlets: {'home': ['classes']}}]">Classes</a>
+                        <a [routerLink]="['/home', {outlets: {'home': ['array']}}]">Arrays</a>
+                        <a [routerLink]="['/home', {outlets: {'home': ['string']}}]">Strings</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown nav-link active">
+                    <span class="dropbtn">Python</span>
+                    <div class="dropdown-content">
+                        <a [routerLink]="['/home', {outlets: {'home': ['list']}}]">Lists</a>
+                        <a [routerLink]="['/home', {outlets: {'home': ['tuple']}}]">Tuples</a>
+                        <a [routerLink]="['/home', {outlets: {'home': ['dictionary']}}]">Dictionary</a>
+                        <a [routerLink]="['/home', {outlets: {'home': ['py_functions']}}]">Fuctions</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown nav-link active">
+                    <span class="dropbtn">Data Structures</span>
+                    <div class="dropdown-content">
+                        <a [routerLink]="['/home', {outlets: {'home': ['divide']}}]">Divide/Conquer</a>
+                        <a [routerLink]="['/home', {outlets: {'home': ['stack']}}]">Stack</a>
+                        <a [routerLink]="['/home', {outlets: {'home': ['greedy']}}]">Greedy Algo</a>
+                        <a [routerLink]="['/home', {outlets: {'home': ['linkedlist']}}]">Linked List</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown nav-link active">
+                    <span class="dropbtn">Linux/Unix</span>
+                    <div class="dropdown-content">
+                        <a [routerLink]="['/home', {outlets: {'home': ['shell']}}]">Shell</a>
+                        <a [routerLink]="['/home', {outlets: {'home': ['pipes']}}]">Pipes</a>
+                        <a [routerLink]="['/home', {outlets: {'home': ['filters']}}]">Filters</a>
+                        <a [routerLink]="['/home', {outlets: {'home': ['directories']}}]">Directories</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="ml-auto">
+            <a class="text-warning " href="# ">Disha Sharma</a>
+        </div>
+    </div>
+</nav>
