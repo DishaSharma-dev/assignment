@@ -106,9 +106,20 @@
                     </div>
                 </div>
             </li>
+            <li>
+              <div class="dropdown nav-link active">
+                  <span class="dropbtn">Quizzes</span>
+                  <div class="dropdown-content">
+                      <!-- <a [routerLink]="['/home', {outlets: {'home': ['shell']}}]">Shell</a>
+                      <a [routerLink]="['/home', {outlets: {'home': ['pipes']}}]">Pipes</a>
+                      <a [routerLink]="['/home', {outlets: {'home': ['filters']}}]">Filters</a>
+                      <a [routerLink]="['/home', {outlets: {'home': ['directories']}}]">Directories</a> -->
+                  </div>
+              </div>
+          </li>
         </ul>
         <div class="ml-auto">
-            <a class="text-warning " href="# ">Disha Sharma</a>
+        <a class="text-warning " (click)="logout()">{{userName}}</a>
         </div>
     </div>
 </nav>

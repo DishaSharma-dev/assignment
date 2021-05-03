@@ -10,7 +10,7 @@ import { FunctionsComponent } from './home/c/functions/functions.component';
 import { LoopsComponent } from './home/c/loops/loops.component';
 import { VariablesComponent } from './home/c/variables/variables.component';
 import { DataArchitectureComponent } from './home/dbms/data-architecture/data-architecture.component';
- 
+
 import { DataindependenceComponent } from './home/dbms/dataindependence/dataindependence.component';
 import { DatamodalsComponent } from './home/dbms/datamodals/datamodals.component';
 import { DataschemasComponent } from './home/dbms/dataschemas/dataschemas.component';
@@ -45,6 +45,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 const routes: Routes = [
   {path:'', component: LoginFormComponent},
+  {path:'login', component: LoginFormComponent},
   { path: 'nav', component: NavBarComponent },
   { path: 'home', component: HomeComponent, children : [
 
@@ -83,12 +84,12 @@ const routes: Routes = [
     {path:'greedy', component:GreedyalgoComponent , outlet:"home"},
     {path:'linkedlist', component:LinkedlistComponent, outlet:"home"},
     {path:'shell', component:ShellComponent, outlet:"home"},
-    {path:'pipes', component:PipesComponent, outlet:"home"},
+    {path:'pipes', component:PipesComponent},
     {path:'filters', component:FiltersComponent, outlet:"home"},
     {path:'directories', component:DirectoriesComponent, outlet:"home"},
-  ] 
+  ]
 },
-  
+
 
 ];
 
