@@ -34,8 +34,10 @@ export class LoginFormComponent implements OnInit {
     if(
       this.userData.find((val:any)=>val.dob==dob) &&
   this.userData.find((val:any)=>val.usn==this.loginForm.value.usn)){
-    let name=this.userData.find((val:any)=>val.dob==dob)?.name;
+    let name=this.userData.find((val:any)=>val.usn==this.loginForm.value.usn)?.name;
+    let usn=this.userData.find((val:any)=>val.usn==this.loginForm.value.usn)?.usn;
     sessionStorage.setItem('userName',name);
+    sessionStorage.setItem('usn',usn);
     this.route.navigate(['home']);
   }else{
     alert("Invalid User")

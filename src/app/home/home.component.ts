@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
    let userName= sessionStorage.getItem('name');
+   let usn= sessionStorage.getItem('usn');
   }
   logout(){
     this.route.navigate(['login']);

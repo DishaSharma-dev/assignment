@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class NavBarComponent implements OnInit {
   userName: string|null='';
+  usn: string | null='';
 
   constructor(private api:ApplicationServiceService,
     private route: Router) { }
@@ -16,6 +17,8 @@ export class NavBarComponent implements OnInit {
   ngOnInit(): void {
 
     this.userName=sessionStorage.getItem('userName')
+    this.usn= sessionStorage.getItem('usn');
+    console.log(sessionStorage,this.usn);
 
   }
 
