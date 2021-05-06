@@ -46,6 +46,9 @@ import { PipesComponent } from './home/linux/pipes/pipes.component';
 import { FiltersComponent } from './home/linux/filters/filters.component';
 import { DirectoriesComponent } from './home/linux/directories/directories.component';
 import { NetTypesComponent } from './home/networking/net-types/net-types.component';
+import { ArraysComponent } from './home/coding/arrays/arrays.component';
+import { TreeComponent } from './home/coding/tree/tree.component';
+import { RecursionComponent } from './home/coding/recursion/recursion.component';
 
 
 @NgModule({
@@ -90,6 +93,9 @@ import { NetTypesComponent } from './home/networking/net-types/net-types.compone
     FiltersComponent,
     DirectoriesComponent,
     NetTypesComponent,
+    ArraysComponent,
+    TreeComponent,
+    RecursionComponent,
   ],
   imports: [
     BrowserModule,

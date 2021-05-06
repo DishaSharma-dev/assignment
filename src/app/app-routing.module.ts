@@ -9,8 +9,11 @@ import { DatatypesComponent } from './home/c/datatypes/datatypes.component';
 import { FunctionsComponent } from './home/c/functions/functions.component';
 import { LoopsComponent } from './home/c/loops/loops.component';
 import { VariablesComponent } from './home/c/variables/variables.component';
+import { ArraysComponent } from './home/coding/arrays/arrays.component';
+import { RecursionComponent } from './home/coding/recursion/recursion.component';
+import { TreeComponent } from './home/coding/tree/tree.component';
 import { DataArchitectureComponent } from './home/dbms/data-architecture/data-architecture.component';
- 
+
 import { DataindependenceComponent } from './home/dbms/dataindependence/dataindependence.component';
 import { DatamodalsComponent } from './home/dbms/datamodals/datamodals.component';
 import { DataschemasComponent } from './home/dbms/dataschemas/dataschemas.component';
@@ -45,6 +48,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 const routes: Routes = [
   {path:'', component: LoginFormComponent},
+  {path:'login', component: LoginFormComponent},
   { path: 'nav', component: NavBarComponent },
   { path: 'home', component: HomeComponent, children : [
 
@@ -86,9 +90,12 @@ const routes: Routes = [
     {path:'pipes', component:PipesComponent, outlet:"home"},
     {path:'filters', component:FiltersComponent, outlet:"home"},
     {path:'directories', component:DirectoriesComponent, outlet:"home"},
-  ] 
+    {path:'arr', component:ArraysComponent, outlet:"home"},
+    {path:'tree', component:TreeComponent, outlet:"home"},
+    {path:'recursion', component:RecursionComponent, outlet:"home"},
+  ]
 },
-  
+
 
 ];
 
