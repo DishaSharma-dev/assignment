@@ -90,12 +90,9 @@ const routes: Routes = [
     {path:'pipes', component:PipesComponent},
     {path:'filters', component:FiltersComponent, outlet:"home"},
     {path:'directories', component:DirectoriesComponent, outlet:"home"},
-<<<<<<< HEAD
     {path:'arr', component:ArraysComponent, outlet:"home"},
     {path:'tree', component:TreeComponent, outlet:"home"},
     {path:'recursion', component:RecursionComponent, outlet:"home"},
-=======
->>>>>>> 641816f1b33ba4fbca9d5287e975f9f28d7083a3
   ]
 },
 
