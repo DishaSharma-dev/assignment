@@ -48,6 +48,9 @@ import { DirectoriesComponent } from './home/linux/directories/directories.compo
 import { NetTypesComponent } from './home/networking/net-types/net-types.component';
 import { QuizComponent } from './home/quiz/quiz.component';
 import { QuizessComponent } from './home/quizess/quizess.component';
+import { ArraysComponent } from './home/coding/arrays/arrays.component';
+import { TreeComponent } from './home/coding/tree/tree.component';
+import { RecursionComponent } from './home/coding/recursion/recursion.component';
 
 
 @NgModule({
@@ -94,6 +97,9 @@ import { QuizessComponent } from './home/quizess/quizess.component';
     NetTypesComponent,
     QuizComponent,
     QuizessComponent,
+    ArraysComponent,
+    TreeComponent,
+    RecursionComponent,
   ],
   imports: [
     BrowserModule,

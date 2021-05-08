@@ -97,6 +97,16 @@
             </li>
             <li>
                 <div class="dropdown nav-link active">
+                    <span class="dropbtn">Coding</span>
+                    <div class="dropdown-content">
+                        <a [routerLink]="['/home', {outlets: {'home': ['arr']}}]">Array</a>
+                        <a [routerLink]="['/home', {outlets: {'home': ['tree']}}]">Tree</a>
+                        <a [routerLink]="['/home', {outlets: {'home': ['recursion']}}]">Recursion</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown nav-link active">
                     <span class="dropbtn">Linux/Unix</span>
                     <div class="dropdown-content">
                         <a [routerLink]="['/home', {outlets: {'home': ['shell']}}]">Shell</a>
