@@ -46,6 +46,8 @@ import { PipesComponent } from './home/linux/pipes/pipes.component';
 import { FiltersComponent } from './home/linux/filters/filters.component';
 import { DirectoriesComponent } from './home/linux/directories/directories.component';
 import { NetTypesComponent } from './home/networking/net-types/net-types.component';
+import { QuizComponent } from './home/quiz/quiz.component';
+import { QuizessComponent } from './home/quizess/quizess.component';
 
 
 @NgModule({
@@ -90,6 +92,8 @@ import { NetTypesComponent } from './home/networking/net-types/net-types.compone
     FiltersComponent,
     DirectoriesComponent,
     NetTypesComponent,
+    QuizComponent,
+    QuizessComponent,
   ],
   imports: [
     BrowserModule,
