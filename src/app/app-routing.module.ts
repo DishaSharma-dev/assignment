@@ -47,11 +47,14 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { QuizComponent } from './home/quiz/quiz.component';
 import { QuizessComponent } from './home/quizess/quizess.component';
+<<<<<<< HEAD
 import { LlComponent } from './home/coding/ll/ll.component';
 import { StrComponent } from './home/coding/str/str.component';
 import { GraphComponent } from './home/coding/graph/graph.component';
 import { QueueComponent } from './home/coding/queue/queue.component';
 import { SortingComponent } from './home/coding/sorting/sorting.component';
+=======
+>>>>>>> 6f6db050d27217c339fee7abaf1fe4bc6430206f
 
 const routes: Routes = [
   {path:'', component: LoginFormComponent},
@@ -104,11 +107,14 @@ const routes: Routes = [
     {path:'arr', component:ArraysComponent, outlet:"home"},
     {path:'tree', component:TreeComponent, outlet:"home"},
     {path:'recursion', component:RecursionComponent, outlet:"home"},
+<<<<<<< HEAD
     {path:'ll', component:LlComponent, outlet:"home"},
     {path:'str', component:StrComponent, outlet:"home"},
     {path:'graph', component:GraphComponent, outlet:"home"},
     {path:'queue', component:QueueComponent, outlet:"home"},
     {path:'sort', component:SortingComponent, outlet:"home"},
+=======
+>>>>>>> 6f6db050d27217c339fee7abaf1fe4bc6430206f
   ]
 },
 
