@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-string',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StringComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private route: Router) { }
 
-  ngOnInit(): void {
+   ngOnInit(): void {
+    if(sessionStorage.getItem('token')!="authToken"){
+      this.route.navigate(['login'])
+    }
   }
 
 }

@@ -10,21 +10,36 @@ import { Router } from '@angular/router';
 export class NavBarComponent implements OnInit {
   userName: string|null='';
   usn: string | null='';
+  role?: string | null;
+  adminFlag: boolean=false;
 
   constructor(private api:ApplicationServiceService,
     private route: Router) { }
 
-  ngOnInit(): void {
+   ngOnInit(): void {
+    if(sessionStorage.getItem('token')!="authToken"){
+      this.route.navigate(['login'])
+    }
 
     this.userName=sessionStorage.getItem('userName')
     this.usn= sessionStorage.getItem('usn');
+    this.role= sessionStorage.getItem('role');
+    if(this.role=="admin"){
+      this.adminFlag=true
+    }
+
     console.log(sessionStorage,this.usn);
 
   }
 
   logout(){
-
     this.route.navigate(['login']);
+    sessionStorage.removeItem('userName')
+  sessionStorage.removeItem('usn');
+  if(this.role){
+
+    sessionStorage.removeItem('role');
+     }
   }
 
 }

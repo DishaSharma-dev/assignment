@@ -4,10 +4,10 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
-            <li class="nav-item active pr-3">
+            <li *ngIf="!adminFlag" class="nav-item active pr-3">
                 <a class="nav-link" [routerLink]="['/home', {outlets: {'home': ['aptitude']}}]" >Quantitative Aptitude <span class="sr-only">(current)</span></a>
             </li>
-            <li>
+            <li *ngIf="!adminFlag">
                 <div class="dropdown nav-link active">
                     <span class="dropbtn">Operating System</span>
                     <div class="dropdown-content">
@@ -18,7 +18,7 @@
                     </div>
                 </div>
             </li>
-            <li>
+            <li *ngIf="!adminFlag">
                 <div class="dropdown nav-link active">
                     <span class="dropbtn">DBMS</span>
                     <div class="dropdown-content">
@@ -29,7 +29,7 @@
                     </div>
                 </div>
             </li>
-            <li>
+            <li *ngIf="!adminFlag">
                 <div class="dropdown nav-link active">
                     <span class="dropbtn">Networking</span>
                     <div class="dropdown-content">
@@ -40,7 +40,7 @@
                     </div>
                 </div>
             </li>
-            <li>
+            <li *ngIf="!adminFlag">
                 <div class="dropdown nav-link active">
                     <span class="dropbtn">C</span>
                     <div class="dropdown-content">
@@ -51,7 +51,7 @@
                     </div>
                 </div>
             </li>
-            <li>
+            <li *ngIf="!adminFlag">
                 <div class="dropdown nav-link active">
                     <span class="dropbtn">C++</span>
                     <div class="dropdown-content">
@@ -62,7 +62,7 @@
                     </div>
                 </div>
             </li>
-            <li>
+            <li *ngIf="!adminFlag">
                 <div class="dropdown nav-link active">
                     <span class="dropbtn">Java</span>
                     <div class="dropdown-content">
@@ -73,7 +73,7 @@
                     </div>
                 </div>
             </li>
-            <li>
+            <li *ngIf="!adminFlag">
                 <div class="dropdown nav-link active">
                     <span class="dropbtn">Python</span>
                     <div class="dropdown-content">
@@ -84,7 +84,7 @@
                     </div>
                 </div>
             </li>
-            <li>
+            <li *ngIf="!adminFlag">
                 <div class="dropdown nav-link active">
                     <span class="dropbtn">Data Structures</span>
                     <div class="dropdown-content">
@@ -95,7 +95,7 @@
                     </div>
                 </div>
             </li>
-            <li>
+            <li *ngIf="!adminFlag">
                 <div class="dropdown nav-link active">
                     <span class="dropbtn">Coding</span>
                     <div class="dropdown-content">
@@ -105,7 +105,7 @@
                     </div>
                 </div>
             </li>
-            <li>
+            <li *ngIf="!adminFlag">
                 <div class="dropdown nav-link active">
                     <span class="dropbtn">Linux/Unix</span>
                     <div class="dropdown-content">
@@ -116,9 +116,12 @@
                     </div>
                 </div>
             </li>
-            <li class="nav-item active pr-3">
+            <li *ngIf="!adminFlag" class="nav-item active pr-3">
               <a class="nav-link" [routerLink]="['/home', {outlets: {'home': ['quiz']}}]" >Quiz <span class="sr-only">(current)</span></a>
           </li>
+          <li *ngIf="adminFlag" class="nav-item active pr-3">
+            <a class="nav-link" [routerLink]="['/home', {outlets: {'home': ['admin']}}]" >Admin Panel <span class="sr-only">(current)</span></a>
+        </li>
         </ul>
         <div class="ml-auto">
         <a class="text-warning ">{{userName}}</a>&nbsp;|

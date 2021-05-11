@@ -14,7 +14,8 @@ export class LoginFormComponent implements OnInit {
   constructor(private fb : FormBuilder,private api:ApplicationServiceService,
     private route: Router) { }
 
-  ngOnInit(): void {
+   ngOnInit(): void {
+
     this.api.getTaskInfo().subscribe((data)=>{
       this.userData=data;
     },(err)=>{})
@@ -29,18 +30,35 @@ export class LoginFormComponent implements OnInit {
 
 
   login(){
-
     let dob=this.loginForm.value.dob?.slice(0, 10).split('-').reverse().join('/');
     if(
       this.userData.find((val:any)=>val.dob==dob) &&
   this.userData.find((val:any)=>val.usn==this.loginForm.value.usn)){
     let name=this.userData.find((val:any)=>val.usn==this.loginForm.value.usn)?.name;
     let usn=this.userData.find((val:any)=>val.usn==this.loginForm.value.usn)?.usn;
+    let role=this.userData.find((val:any)=>val.usn==this.loginForm.value.usn)?.role;
     sessionStorage.setItem('userName',name);
     sessionStorage.setItem('usn',usn);
+    sessionStorage.setItem('token','authToken');
+    if(role){
+
+    sessionStorage.setItem('role',role);
+    }
     this.route.navigate(['home']);
   }else{
     alert("Invalid User")
   }
   }
+
+
+// ngOnDestroy(){
+//     sessionStorage.removeItem('userName')
+//     sessionStorage.removeItem('token');
+//   sessionStorage.removeItem('usn');
+
+//     sessionStorage.removeItem('role');
+
+// }
+
+
 }

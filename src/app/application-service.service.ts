@@ -26,4 +26,36 @@ export class ApplicationServiceService {
         })
       );
   }
+
+
+  /**
+   * function to save task info
+   * @param payload: data to send in payload
+   * @param params: query params
+   * @param headers: headers if any
+   */
+
+  saveTaskInfo = (payload: any, params?: any, headers?: any): Observable<any> => {
+    return this.http
+            .post('http://localhost:9000/aliens', payload, { params, headers })
+            .pipe(
+              map((response: any) => {
+                return response;
+              })
+            );
+  }
+
+  patchTaskInfo=( param: any,payload:any): Observable<any> =>{
+
+    return this.http
+        .patch('http://localhost:9000/aliens/'+param,payload)
+        .pipe(
+          map((response: any) => {
+            return response;
+          })
+        );
+    }
+
+
+
 }

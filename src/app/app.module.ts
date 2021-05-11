@@ -51,6 +51,7 @@ import { QuizessComponent } from './home/quizess/quizess.component';
 import { ArraysComponent } from './home/coding/arrays/arrays.component';
 import { TreeComponent } from './home/coding/tree/tree.component';
 import { RecursionComponent } from './home/coding/recursion/recursion.component';
+import { AdminComponent } from './home/admin/admin.component';
 
 
 @NgModule({
@@ -100,6 +101,7 @@ import { RecursionComponent } from './home/coding/recursion/recursion.component'
     ArraysComponent,
     TreeComponent,
     RecursionComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,

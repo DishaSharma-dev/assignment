@@ -9,12 +9,21 @@ import { Router } from '@angular/router';
 export class AptitudeComponent implements OnInit {
   Ans1: boolean=false;
   Ans2: boolean=false;
+  role?: string | null;
+  adminFlag: boolean=false;
 
-  constructor(private router : Router) {
-    console.log(this.router.getCurrentNavigation()!.extras.state);
+  constructor(private route : Router) {
+    console.log(this.route.getCurrentNavigation()!.extras.state);
    }
 
-  ngOnInit(): void {
+   ngOnInit(): void {
+    if(sessionStorage.getItem('token')!="authToken"){
+      this.route.navigate(['login'])
+    }
+    this.role= sessionStorage.getItem('role');
+    if(this.role=="admin"){
+      this.adminFlag=true
+    }
   }
 
 clickMe1(){

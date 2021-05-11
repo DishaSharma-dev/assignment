@@ -1,0 +1,80 @@
+
+
+<button class="btn btn-primary" (click)="scorefunc()" >Add Score</button>
+
+<button class="btn btn-primary ml-5 left"  (click)="userfunc()" >Add Student</button>
+
+
+
+<div class="container" *ngIf="userform">
+  <div class="jumbotron verticle-center mt-5">
+      <div class="row justify-content-center">
+
+          <form [formGroup]=" userForm " (ngSubmit)="addUser() ">
+              <h3 class="text-center p-5 ">Add User Form</h3>
+              <div class="form-group ">
+                  <label class="form-label ">USN</label>
+                  <input type="number " formControlName="usn" class="form-control " size="80" />
+                  <div *ngIf="userForm.controls[ 'usn'].invalid && userForm.controls[ 'usn'].touched ">
+                      <small class="text-danger " *ngIf="userForm.controls[ 'usn'].errors?.required ">This is required field</small>
+                  </div>
+              </div>
+              <div class="form-group ">
+                <label class="form-label ">Name</label>
+                <input type="text " formControlName="name" class="form-control " size="80" />
+                <div *ngIf="userForm.controls[ 'name'].invalid && userForm.controls[ 'name'].touched ">
+                    <small class="text-danger " *ngIf="userForm.controls[ 'name'].errors?.required ">This is required field</small>
+                </div>
+            </div>
+              <div class="form-group ">
+                  <label class="form-label ">Date of Birth (format-dd/mm/yyyy)</label>
+                  <input type="password" class="form-control "  placeholder="dd/mm/yyyy" formControlName="dob" size="80" />
+                  <small class="text-danger" *ngIf="userForm.controls['dob'].invalid && userForm.controls[ 'dob'].touched ">This is required field having format dd/mm/yyyy</small>
+
+              </div>
+
+              <div class="text-center pt-3 ">
+                  <button type="submit"  class=" btn btn-primary w-100 mt-2 ">Add User</button>
+              </div>
+          </form>
+      </div>
+  </div>
+</div>
+
+
+
+
+<div class="container" *ngIf="scoreform">
+  <div class="jumbotron verticle-center mt-5">
+      <div class="row justify-content-center">
+
+          <form [formGroup]="scoreForm " (ngSubmit)="submitScore() ">
+              <h3 class="text-center p-5 ">Score Form</h3>
+              <div class="form-group ">
+                  <label for="usn" class="form-label">Choose a USN:</label>
+                &nbsp;
+                  <select #usnData  (click)="getUsn($event)"  name="usn" id="usn">
+                    <option  disabled selected  >--Please choose an option--</option>
+                  <option [value]="data.usn"  value="usnData.value" *ngFor="let data  of userData">{{data?.usn}}</option>
+                  </select>
+
+                  <div *ngIf="scoreForm.controls[ 'usn'].invalid && scoreForm.controls[ 'usn'].touched ">
+                      <small class="text-danger " *ngIf="scoreForm.controls[ 'usn'].errors?.required ">This is required field</small>
+                  </div>
+
+              </div>
+              <div class="form-group ">
+                  <label class="form-label ">Score</label>
+                  <input type="number" class="form-control "  name="score" placeholder="Enter your score" formControlName="score"/>
+                  <small class="text-danger" *ngIf="scoreForm.controls['score'].invalid && scoreForm.controls[ 'score'].touched ">This is required field</small>
+
+              </div>
+
+              <div class="text-center pt-3 ">
+                  <button type="submit"  class=" btn btn-primary w-100 mt-2 ">Add Score</button>
+              </div>
+          </form>
+      </div>
+  </div>
+
+</div>

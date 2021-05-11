@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ApplicationServiceService } from 'src/app/application-service.service';
 
 @Component({
   selector: 'app-quiz',
@@ -7,10 +8,26 @@ import { Router } from '@angular/router';
   styleUrls: ['./quiz.component.css']
 })
 export class QuizComponent implements OnInit {
+  role?: string | null;
+  userData: any;
+  score: any;
 
-  constructor(private router:Router) { }
+  constructor(private router:Router,private api:ApplicationServiceService) { }
 
-  ngOnInit(): void {
+   ngOnInit(): void {
+    if(sessionStorage.getItem('token')!="authToken"){
+      this.router.navigate(['login'])
+    }
+
+    let userName= sessionStorage.getItem('name');
+    let usn= sessionStorage.getItem('usn');
+    this.role= sessionStorage.getItem('role');
+
+    this.api.getTaskInfo().subscribe((data)=>{
+      this.userData=data;
+     this.score = this.userData.find((val:any)=>val.usn==usn)?.score
+    },(err)=>{})
+
   }
 
   route(){

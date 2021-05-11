@@ -47,15 +47,19 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { QuizComponent } from './home/quiz/quiz.component';
 import { QuizessComponent } from './home/quizess/quizess.component';
+import { AdminComponent } from './home/admin/admin.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {path:'', component: LoginFormComponent},
   {path:'login', component: LoginFormComponent},
-  { path: 'nav', component: NavBarComponent },
-  { path: 'home', component: HomeComponent, children : [
+  { path: 'nav',component: NavBarComponent },
 
+
+  { path: 'home', component: HomeComponent,
+   children : [
     {path:'aptitude', component:AptitudeComponent , outlet:"home"},
-    {path:'', component:AptitudeComponent , outlet:"home"},
+    {path:'', component:AptitudeComponent, outlet:"home"},
     {path:'defination', component:DefinationsComponent , outlet:"home"},
     {path:'processes', component:ProcessesComponent , outlet:"home"},
     {path:'types', component:TypesComponent , outlet:"home"},
@@ -76,9 +80,8 @@ const routes: Routes = [
     {path:'c_variables', component:CVariablesComponent , outlet:"home"},
     {path:'c_loops', component:CLoopsComponent , outlet:"home"},
     {path:'quiz', component:QuizComponent , outlet:"home"},
-    { path: 'quizess',
-    component: QuizessComponent,outlet:"home"
-  },
+    {path:'admin', component:AdminComponent , outlet:"home"},
+    { path: 'quizess',component: QuizessComponent,outlet:"home"},
     {path:'c_oops', component:COopsComponent , outlet:"home"},
     {path:'classes', component:ClassesComponent , outlet:"home"},
     {path:'object', component:ObjectComponent , outlet:"home"},

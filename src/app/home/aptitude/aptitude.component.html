@@ -1,24 +1,36 @@
-<p>1) Sohan started a business with a capital of Rs. 80000. After 6 months Mohan joined as a partner by investing Rs. 65000. After one year they earned total profit Rs. 20000. What is share of Sohan in the profit?</p>
-<ul type="none">
-    <li>A. Rs. 5222.2</li>
-    <li>B. Rs. 14222.2</li>
-    <li>C. Rs. 6222.2</li>
-    <li>D. Rs. 6777.7</li>
-</ul>
+
+<ng-container *ngIf="!adminFlag" >
+  <div >
+    <p>1) Sohan started a business with a capital of Rs. 80000. After 6 months Mohan joined as a partner by investing Rs. 65000. After one year they earned total profit Rs. 20000. What is share of Sohan in the profit?</p>
+  <ul type="none">
+      <li>A. Rs. 5222.2</li>
+      <li>B. Rs. 14222.2</li>
+      <li>C. Rs. 6222.2</li>
+      <li>D. Rs. 6777.7</li>
+  </ul>
 
 
-<button type="button" class="btn btn-primary" (click)="clickMe1()" >show answer</button>
-<div class="horizaontal" *ngIf="Ans1">&nbsp;The answer is B. Rs. 14222.2</div>
-<br>
-<p>2) On lending a certain sum of money on C.I. one gets Rs.9050 in 2 years and Rs.9500 in 3 years. What is the rate of interest?</p>
-<ul type="none">
-    <li>A. Rs. 8427</li>
-    <li>B. Rs. 1000</li>
-    <li>C. Rs. 1299</li>
-    <li>D. Rs. 6770</li>
-</ul>
+  <button type="button" class="btn btn-primary" (click)="clickMe1()" >show answer</button>
+  <div class="horizaontal" *ngIf="Ans1">&nbsp;The answer is B. Rs. 14222.2</div>
+  <br>
+  <p>2) On lending a certain sum of money on C.I. one gets Rs.9050 in 2 years and Rs.9500 in 3 years. What is the rate of interest?</p>
+  <ul type="none">
+      <li>A. Rs. 8427</li>
+      <li>B. Rs. 1000</li>
+      <li>C. Rs. 1299</li>
+      <li>D. Rs. 6770</li>
+  </ul>
 
-<div>
-<button type="button" class="btn btn-primary" (click)="clickMe2()" >show answer</button>&nbsp;
-<div class="horizaontal" *ngIf="Ans2">The answer is A. Rs. 8427</div>
-</div>
+  <div>
+  <button type="button" class="btn btn-primary" (click)="clickMe2()" >show answer</button>&nbsp;
+  <div class="horizaontal" *ngIf="Ans2">The answer is A. Rs. 8427</div>
+  </div>
+
+  </div>
+</ng-container>
+
+
+<ng-container *ngIf="adminFlag">
+<app-admin></app-admin>
+</ng-container>
+
