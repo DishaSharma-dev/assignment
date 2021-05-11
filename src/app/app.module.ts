@@ -52,6 +52,11 @@ import { ArraysComponent } from './home/coding/arrays/arrays.component';
 import { TreeComponent } from './home/coding/tree/tree.component';
 import { RecursionComponent } from './home/coding/recursion/recursion.component';
 import { AdminComponent } from './home/admin/admin.component';
+import { LlComponent } from './home/coding/ll/ll.component';
+import { StrComponent } from './home/coding/str/str.component';
+import { GraphComponent } from './home/coding/graph/graph.component';
+import { QueueComponent } from './home/coding/queue/queue.component';
+import { SortingComponent } from './home/coding/sorting/sorting.component';
 
 
 @NgModule({
@@ -102,6 +107,11 @@ import { AdminComponent } from './home/admin/admin.component';
     TreeComponent,
     RecursionComponent,
     AdminComponent,
+    LlComponent,
+    StrComponent,
+    GraphComponent,
+    QueueComponent,
+    SortingComponent,
   ],
   imports: [
     BrowserModule,

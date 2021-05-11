@@ -50,6 +50,13 @@ import { QuizessComponent } from './home/quizess/quizess.component';
 import { AdminComponent } from './home/admin/admin.component';
 import { AuthGuard } from './auth.guard';
 
+import { LlComponent } from './home/coding/ll/ll.component';
+import { StrComponent } from './home/coding/str/str.component';
+import { GraphComponent } from './home/coding/graph/graph.component';
+import { QueueComponent } from './home/coding/queue/queue.component';
+import { SortingComponent } from './home/coding/sorting/sorting.component';
+
+
 const routes: Routes = [
   {path:'', component: LoginFormComponent},
   {path:'login', component: LoginFormComponent},
@@ -102,6 +109,13 @@ const routes: Routes = [
     {path:'arr', component:ArraysComponent, outlet:"home"},
     {path:'tree', component:TreeComponent, outlet:"home"},
     {path:'recursion', component:RecursionComponent, outlet:"home"},
+
+    {path:'ll', component:LlComponent, outlet:"home"},
+    {path:'str', component:StrComponent, outlet:"home"},
+    {path:'graph', component:GraphComponent, outlet:"home"},
+    {path:'queue', component:QueueComponent, outlet:"home"},
+    {path:'sort', component:SortingComponent, outlet:"home"},
+
   ]
 },
 
