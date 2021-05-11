@@ -102,6 +102,11 @@
                         <a [routerLink]="['/home', {outlets: {'home': ['arr']}}]">Array</a>
                         <a [routerLink]="['/home', {outlets: {'home': ['tree']}}]">Tree</a>
                         <a [routerLink]="['/home', {outlets: {'home': ['recursion']}}]">Recursion</a>
+                        <a [routerLink]="['/home', {outlets: {'home': ['ll']}}]">LinkedList</a>
+                        <a [routerLink]="['/home', {outlets: {'home': ['str']}}]">String</a>
+                        <a [routerLink]="['/home', {outlets: {'home': ['graph']}}]">Graph</a>
+                        <a [routerLink]="['/home', {outlets: {'home': ['queue']}}]">Queue</a>
+                        <a [routerLink]="['/home', {outlets: {'home': ['sort']}}]">Sorting</a>
                     </div>
                 </div>
             </li>
@@ -116,16 +121,8 @@
                     </div>
                 </div>
             </li>
-            <li>
-              <div class="dropdown nav-link active">
-                  <span class="dropbtn">Quizzes</span>
-                  <div class="dropdown-content">
-                      <!-- <a [routerLink]="['/home', {outlets: {'home': ['shell']}}]">Shell</a>
-                      <a [routerLink]="['/home', {outlets: {'home': ['pipes']}}]">Pipes</a>
-                      <a [routerLink]="['/home', {outlets: {'home': ['filters']}}]">Filters</a>
-                      <a [routerLink]="['/home', {outlets: {'home': ['directories']}}]">Directories</a> -->
-                  </div>
-              </div>
+            <li class="nav-item active pr-3">
+              <a class="nav-link" [routerLink]="['/home', {outlets: {'home': ['quiz']}}]" >Quiz <span class="sr-only">(current)</span></a>
           </li>
         </ul>
         <div class="ml-auto">

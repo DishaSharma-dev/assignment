@@ -45,6 +45,13 @@ import { PyFunctionComponent } from './home/python/py-function/py-function.compo
 import { TupleComponent } from './home/python/tuple/tuple.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { QuizComponent } from './home/quiz/quiz.component';
+import { QuizessComponent } from './home/quizess/quizess.component';
+import { LlComponent } from './home/coding/ll/ll.component';
+import { StrComponent } from './home/coding/str/str.component';
+import { GraphComponent } from './home/coding/graph/graph.component';
+import { QueueComponent } from './home/coding/queue/queue.component';
+import { SortingComponent } from './home/coding/sorting/sorting.component';
 
 const routes: Routes = [
   {path:'', component: LoginFormComponent},
@@ -73,6 +80,10 @@ const routes: Routes = [
     {path:'c_datatypes', component:CDatatypesComponent , outlet:"home"},
     {path:'c_variables', component:CVariablesComponent , outlet:"home"},
     {path:'c_loops', component:CLoopsComponent , outlet:"home"},
+    {path:'quiz', component:QuizComponent , outlet:"home"},
+    { path: 'quizess',
+    component: QuizessComponent,outlet:"home"
+  },
     {path:'c_oops', component:COopsComponent , outlet:"home"},
     {path:'classes', component:ClassesComponent , outlet:"home"},
     {path:'object', component:ObjectComponent , outlet:"home"},
@@ -90,12 +101,14 @@ const routes: Routes = [
     {path:'pipes', component:PipesComponent},
     {path:'filters', component:FiltersComponent, outlet:"home"},
     {path:'directories', component:DirectoriesComponent, outlet:"home"},
-<<<<<<< HEAD
     {path:'arr', component:ArraysComponent, outlet:"home"},
     {path:'tree', component:TreeComponent, outlet:"home"},
     {path:'recursion', component:RecursionComponent, outlet:"home"},
-=======
->>>>>>> 641816f1b33ba4fbca9d5287e975f9f28d7083a3
+    {path:'ll', component:LlComponent, outlet:"home"},
+    {path:'str', component:StrComponent, outlet:"home"},
+    {path:'graph', component:GraphComponent, outlet:"home"},
+    {path:'queue', component:QueueComponent, outlet:"home"},
+    {path:'sort', component:SortingComponent, outlet:"home"},
   ]
 },
 

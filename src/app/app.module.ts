@@ -46,9 +46,16 @@ import { PipesComponent } from './home/linux/pipes/pipes.component';
 import { FiltersComponent } from './home/linux/filters/filters.component';
 import { DirectoriesComponent } from './home/linux/directories/directories.component';
 import { NetTypesComponent } from './home/networking/net-types/net-types.component';
+import { QuizComponent } from './home/quiz/quiz.component';
+import { QuizessComponent } from './home/quizess/quizess.component';
 import { ArraysComponent } from './home/coding/arrays/arrays.component';
 import { TreeComponent } from './home/coding/tree/tree.component';
 import { RecursionComponent } from './home/coding/recursion/recursion.component';
+import { LlComponent } from './home/coding/ll/ll.component';
+import { StrComponent } from './home/coding/str/str.component';
+import { GraphComponent } from './home/coding/graph/graph.component';
+import { QueueComponent } from './home/coding/queue/queue.component';
+import { SortingComponent } from './home/coding/sorting/sorting.component';
 
 
 @NgModule({
@@ -93,9 +100,16 @@ import { RecursionComponent } from './home/coding/recursion/recursion.component'
     FiltersComponent,
     DirectoriesComponent,
     NetTypesComponent,
+    QuizComponent,
+    QuizessComponent,
     ArraysComponent,
     TreeComponent,
     RecursionComponent,
+    LlComponent,
+    StrComponent,
+    GraphComponent,
+    QueueComponent,
+    SortingComponent,
   ],
   imports: [
     BrowserModule,
