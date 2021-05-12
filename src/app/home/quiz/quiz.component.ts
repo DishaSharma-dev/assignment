@@ -11,6 +11,8 @@ export class QuizComponent implements OnInit {
   role?: string | null;
   userData: any;
   score: any;
+  link: any;
+  viewScore: boolean=false;
 
   constructor(private router:Router,private api:ApplicationServiceService) { }
 
@@ -25,14 +27,19 @@ export class QuizComponent implements OnInit {
 
     this.api.getTaskInfo().subscribe((data)=>{
       this.userData=data;
-     this.score = this.userData.find((val:any)=>val.usn==usn)?.score
+
+     this.link = this.userData.find((val:any)=>val.usn=="1DS17IS005")?.link;
+     this.score = this.userData.find((val:any)=>val.usn==usn)?.score;
     },(err)=>{})
 
   }
 
-  route(){
-    this.router.navigateByUrl('http://www.youtube.com')
-  }
+  // route(){
+  //   this.router.navigateByUrl(this.link);
+  // }
 
+  view_score(){
+    this.viewScore=!this.viewScore;
+  }
 
 }

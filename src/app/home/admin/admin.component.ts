@@ -13,6 +13,9 @@ export class AdminComponent implements OnInit {
   scoreform: boolean=false;
   userform: any=false;
   usnForScore: any;
+  viewTable: boolean=false;
+  scoreData: any=[];
+  haveData: boolean=false;
   constructor(private fb : FormBuilder,private api:ApplicationServiceService,
     private route: Router) { }
 
@@ -22,6 +25,8 @@ export class AdminComponent implements OnInit {
     }
     this.api.getTaskInfo().subscribe((data)=>{
       this.userData=data;
+      this.scoreData=this.userData.filter((val:any)=>val?.score?.length>0);
+
     },(err)=>{})
   }
 
@@ -38,12 +43,43 @@ export class AdminComponent implements OnInit {
 
   scorefunc(){
     this.userform=false;
-    this.scoreform=!this.scoreform
+    this.scoreform=!this.scoreform;
+    this.viewTable;
   }
 
   userfunc(){
     this.scoreform=false;
-    this.userform=!this.userform
+    this.userform=!this.userform;
+    this.viewTable=false;
+  }
+
+  quizFunc(data:any){
+console.log(data);
+let payload={
+  usn:"1DS17IS005",
+  link:data
+}
+let id=this.userData.find((val:any)=>val.usn=="1DS17IS005")?._id;
+this.api.patchTaskInfo(id,payload).subscribe((data)=>{
+
+ alert("Quiz Link has been updated")
+},(err)=>{
+ alert('try again')
+})
+}
+
+disableFunc(data:any){
+if(data.length>0){
+  this.haveData=true;
+}else{
+  this.haveData=false
+}
+}
+
+  viewScore(){
+    this.viewTable=!this.viewTable;
+    this.userform=false;
+    this.scoreform=false;
   }
 
   addUser(){
@@ -60,9 +96,15 @@ export class AdminComponent implements OnInit {
      alert('try again')
    })
   }
+
+
+
   getUsn(event:any){
     this.usnForScore=event.target.value;
   }
+
+
+
   submitScore(){
     let payload={
       usn:this.usnForScore,

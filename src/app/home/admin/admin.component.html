@@ -4,6 +4,34 @@
 
 <button class="btn btn-primary ml-5 left"  (click)="userfunc()" >Add Student</button>
 
+<div class="row">
+
+  <input type="text"  class="form-control quiz" placeholder="Paste quiz link here" (keyup)="disableFunc(quizLink.value)"  #quizLink>
+  <button class="btn btn-primary " id="changeQuiz"  [disabled]="!haveData"  (click)="quizFunc(quizLink.value)" >Change Quiz</button>
+
+<button class="btn btn-primary " id="viewScore"  (click)="viewScore()" >view Score</button>
+</div>
+
+
+
+<div id="table" *ngIf="viewTable" class="container">
+  <h2>Student Scores</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Score</th>
+      </tr>
+    </thead>
+    <tbody >
+      <tr  *ngFor="let data of scoreData">
+      <td>{{data?.name}}</td>
+      <td>{{data?.score}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 
 
 <div class="container" *ngIf="userform">
@@ -28,7 +56,7 @@
             </div>
               <div class="form-group ">
                   <label class="form-label ">Date of Birth (format-dd/mm/yyyy)</label>
-                  <input type="password" class="form-control "  placeholder="dd/mm/yyyy" formControlName="dob" size="80" />
+                  <input type="text" class="form-control "  placeholder="dd/mm/yyyy" formControlName="dob" size="80" />
                   <small class="text-danger" *ngIf="userForm.controls['dob'].invalid && userForm.controls[ 'dob'].touched ">This is required field having format dd/mm/yyyy</small>
 
               </div>

@@ -1,5 +1,16 @@
-<a href="https://forms.gle/YaqTpArWE8XJFDSe8">Click here for Quiz</a>
+<div class="row">
+
+<button class="btn btn-primary" type="button"><a
+  [href]="link">
+  Redirect to Quiz</a>
+</button>
+<button class="btn btn-primary" id="scoreid"  *ngIf="score" type="button"
+(click)="view_score()">view Quiz Score</button>
 
 
+</div>
 
-<h1  id="score" *ngIf="score">Quiz Score &nbsp;{{score}}</h1>
+
+<h1 *ngIf="viewScore" id="score" >Quiz Score - {{score}}</h1>
+
+
