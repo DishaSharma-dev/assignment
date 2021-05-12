@@ -6,7 +6,7 @@
 
 <div class="row">
 
-  <input type="text"  class="form-control quiz" placeholder="Paste quiz link here" (keyup)="disableFunc(quizLink.value)"  #quizLink>
+  <input type="text"  class="form-control quiz"   placeholder="Paste quiz link here" (keyup)="disableFunc(quizLink.value)"  #quizLink>
   <button class="btn btn-primary " id="changeQuiz"  [disabled]="!haveData"  (click)="quizFunc(quizLink.value)" >Change Quiz</button>
 
 <button class="btn btn-primary " id="viewScore"  (click)="viewScore()" >view Score</button>

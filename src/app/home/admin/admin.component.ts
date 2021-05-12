@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ApplicationServiceService } from 'src/app/application-service.service';
 import { Router } from '@angular/router';
@@ -16,6 +16,10 @@ export class AdminComponent implements OnInit {
   viewTable: boolean=false;
   scoreData: any=[];
   haveData: boolean=false;
+  quizData: string='';
+
+  @ViewChild('quizLink')
+  quizvalue!: ElementRef;
   constructor(private fb : FormBuilder,private api:ApplicationServiceService,
     private route: Router) { }
 
@@ -61,6 +65,10 @@ let payload={
 }
 let id=this.userData.find((val:any)=>val.usn=="1DS17IS005")?._id;
 this.api.patchTaskInfo(id,payload).subscribe((data)=>{
+  this.haveData=false;
+  this.quizData=''
+  this.quizvalue.nativeElement.innerText="";
+  this.quizvalue.nativeElement.value="";
 
  alert("Quiz Link has been updated")
 },(err)=>{
@@ -72,7 +80,7 @@ disableFunc(data:any){
 if(data.length>0){
   this.haveData=true;
 }else{
-  this.haveData=false
+  this.haveData=false;
 }
 }
 
